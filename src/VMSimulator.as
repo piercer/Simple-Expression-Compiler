@@ -46,7 +46,7 @@ package
                         }
                         break;
 
-                    case Token.NUMERIC:
+                    case Token.LITERAL:
                         _stack.push( token.value );
                         break;
 

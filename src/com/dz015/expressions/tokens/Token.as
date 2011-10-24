@@ -6,7 +6,7 @@ package com.dz015.expressions.tokens
         public static const SYMBOL:uint = 0;
         public static const OPERATOR:uint = 1;
         public static const FUNCTION:uint = 3;
-        public static const NUMERIC:uint = 4;
+        public static const LITERAL:uint = 4;
         public static const LEFT_BRACKET:uint = 5;
         public static const RIGHT_BRACKET:uint = 6;
 
@@ -78,7 +78,7 @@ package com.dz015.expressions.tokens
 
         public function get isNumeric():Boolean
         {
-            return _type == NUMERIC;
+            return _type == LITERAL;
         }
 
         public function get isFunction():Boolean

@@ -42,7 +42,7 @@ package com.dz015.expressions.tokens.expression
             }
             if ( match[2] )
             {
-                token = new Token( value, Token.NUMERIC );
+                token = new Token( value, Token.LITERAL );
             }
             else if ( match[3] )
             {

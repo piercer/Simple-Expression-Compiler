@@ -1,20 +1,6 @@
-<!--
-    Mockolate
+<project name="SimpleExpressionCompiler" basedir="." default="compile">
 
-    Usage:
-        $ ant -v clean package
-
-    Dependencies:
-    - Ant 1.7+
-    - Flex 3.5+ / 4.0+
-
-   The goal of this build is compile the library SWC, generate FlexPMD reports, generate ASDocs, and
-   bundle a binary distribution.
--->
-<project name="SimpleExpressionCompiler" basedir="." default="package">
-    <property environment="env" />
     <property file="${basedir}/build/build.properties" />
-    <property name="FLEX_HOME" location="${FLEX_HOME}" />
 
     <taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
 
@@ -29,9 +15,6 @@
           <include-sources dir="${src.loc}">
             <include name="**/*.as" />
           </include-sources>
-          <include-libraries dir="${libs.loc}">
-            <include name="as3-commons*.swc" />
-          </include-libraries>
           <external-library-path dir="${FLEX_HOME}/frameworks/libs" append="true">
             <include name="*.swc" />
           </external-library-path>
@@ -43,178 +26,12 @@
         <delete dir="${target.loc}" />
     </target>
 
-    <target name="initialize"
-        depends="initialize-directories, initialize-properties, initialize-build-configuration, initialize-build-number, initialize-classes">
-    </target>
-
-    <target name="initialize-directories">
-        <mkdir dir="${target.loc}" />
+    <target name="initialize" depends="clean">
         <mkdir dir="${bin.loc}" />
-        <mkdir dir="${doc.loc}" />
-        <mkdir dir="${report.loc}" />
-        <mkdir dir="${report.flexunit.loc}" />
     </target>
 
-    <target name="initialize-properties">
-        <property name="library.flex.swc" value="${build.artifactId}-${build.version}-flex.swc" />
-        <property name="library.as3.swc" value="${build.artifactId}-${build.version}-as3.swc" />
-        <property name="library.zip" value="${build.artifactId}-${build.version}.zip" />
-    </target>
-
-    <target name="initialize-build-configuration">
-
-        <java jar="${FLEX_HOME}/lib/compc.jar" fork="true" failonerror="true" outputproperty="build.sdk.version">
-            <arg line="-version" />
-        </java>
-        <condition property="build.isFlex4">
-            <contains string="${build.sdk.version}" substring="Version 4." casesensitive="false" />
-        </condition>
-
-        <condition property="build.pmd">
-            <and>
-                <available classname="com.adobe.ac.pmd.ant.FlexPmdAntTask" />
-                <available classname="com.adobe.ac.cpd.ant.FlexCpdAntTask" />
-                <available classname="com.adobe.ac.pmd.metrics.ant.FlexMetricsAntTask" />
-            </and>
-        </condition>
-
-        <echo message="build.sdk.version: ${build.sdk.version}" />
-        <echo message="build.report ${build.report}" />
-        <echo message="build.pmd    ${build.pmd}" />
-    </target>
-
-    <target name="initialize-build-number">
-        <!-- Favour external build number, eg from Hudson -->
-        <condition property="build.number" value="${env.BUILD_NUMBER}">
-            <isset property="env.BUILD_NUMBER" />
-        </condition>
-
-        <!-- Otherwise use the local build.number -->
-        <propertyfile file="${build.number.loc}" comment="${ant.project.name} build number">
-            <entry key="build.number" default="0" value="1" type="int" operation="+" />
-        </propertyfile>
-        <property file="${build.number.loc}" />
-    </target>
-
-    <target name="initialize-classes">
-        <!-- Create properties file from .flexLibProperties -->
-        <xslt in="${library.loc}/.flexLibProperties"
-            out="${bin.loc}/flexLib.properties"
-            style="${build.loc}/flexLibProperties.xsl" />
-        <!-- Pull in class file list for compc -->
-        <property file="${bin.loc}/flexLib.properties" />
-    </target>
-
-    <target name="compile"
-        depends="initialize, compile.library">
-    </target>
-
-    <target name="compile.library.check-if-required">
-        <uptodate property="compile.library.not-required"
-            targetfile="${bin.loc}/${library.swc}">
-            <srcfiles dir="${basedir}">
-                <include name="${src.loc}/**/.as" />
-                <include name="${src.loc}/**/.mxml" />
-                <include name="${test.src.loc}/**/.as" />
-                <include name="${test.src.loc}/**/.mxml" />
-            </srcfiles>
-        </uptodate>
-    </target>
-
-    <target name="compile.library"
-        depends="compile.library.check-if-required"
-        unless="compile.library.not-required">
-        <compile-library output="${bin.loc}/${library.flex.swc}" useFlexClasses="true" />
-        <compile-library output="${bin.loc}/${library.as3.swc}" useFlexClasses="false" />
-    </target>
-
-    <target name="test"
-        depends="compile, compile.test, test.execute, report, pmd">
-    </target>
-
-    <target name="compile.test.check-if-required">
-        <uptodate property="compile.test.not-required"
-            targetfile="${bin.loc}/${test.swf}">
-            <srcfiles dir="${basedir}">
-                <include name="${src.loc}/**/.as" />
-                <include name="${src.loc}/**/.mxml" />
-                <include name="${test.src.loc}/**/.as" />
-                <include name="${test.src.loc}/**/.mxml" />
-            </srcfiles>
-        </uptodate>
-    </target>
-
-    <target name="compile.test"
-        depends="compile.test.check-if-required"
-        unless="compile.test.not-required">
-        <mxmlc file="${test.src.loc}/${test.runner}"
-            target-player="${flashplayer.version}"
-            output="${bin.loc}/${test.swf}">
-            <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml" />
-            <define name="CONFIG::useFlexClasses" value="true" />
-        </mxmlc>
-    </target>
-
-    <target name="test.execute">
-        <flexunit
-            swf="${bin.loc}/${test.swf}"
-            toDir="${report.flexunit.loc}"
-            haltonfailure="false"
-            verbose="true"
-            localTrusted="true" />
-    </target>
-
-    <target name="report">
-        <junitreport todir="${report.flexunit.loc}">
-            <fileset dir="${report.flexunit.loc}">
-                <include name="TEST-*.xml" />
-            </fileset>
-            <report format="frames" todir="${report.flexunit.loc}/html" />
-        </junitreport>
-    </target>
-
-    <target name="pmd" if="build.pmd">
-        <taskdef name="pmd" classname="com.adobe.ac.pmd.ant.FlexPmdAntTask" />
-        <taskdef name="cpd" classname="com.adobe.ac.cpd.ant.FlexCpdAntTask" />
-        <taskdef name="metrics" classname="com.adobe.ac.pmd.metrics.ant.FlexMetricsAntTask" />
-
-        <echo message="FlexMetrics running..." />
-        <metrics sourcedirectory="${src.loc}" outputfile="${report.loc}/javancss.xml" />
-
-        <echo message="FlexPMD running..." />
-        <pmd sourceDirectory="${src.loc}" outputDirectory="${report.loc}" ruleset="${build.loc}/pmd-ruleset.xml" />
-
-        <echo message="FlexCPD running..." />
-        <cpd minimumTokenCount="50" outputFile="${report.loc}/cpd.xml">
-            <fileset dir="${src.loc}">
-                <include name="**/*.as" />
-            </fileset>
-        </cpd>
-    </target>
-
-    <target name="docs" depends="initialize" if="build.isFlex4">
-        <java jar="${FLEX_HOME}/lib/asdoc.jar" fork="true" failonerror="true">
-            <arg line="+flexlib '${FLEX_HOME}/frameworks'" />
-            <arg line="-doc-sources '${src.loc}'" />
-            <arg line="-source-path+='${src.loc}'" />
-            <arg line="-library-path+='${libs.loc}'" />
-            <arg line="-output '${doc.loc}'" />
-            <arg line="-main-title '${ant.project.name} Documentation'" />
-            <arg line="-window-title '${ant.project.name} Documentation'" />
-            <arg line="-define=CONFIG::useFlexClasses,true" />
-        </java>
-    </target>
-
-    <target name="package"
-        depends="compile, test, docs">
-
-        <zip destfile="${target.loc}/${library.zip}">
-            <zipfileset dir="${doc.loc}" prefix="mockolate-${build.version}/docs" />
-            <zipfileset dir="${bin.loc}" prefix="mockolate-${build.version}">
-                <include name="*.swc" />
-             </zipfileset>
-        </zip>
-
+    <target name="compile" depends="initialize">
+        <compile-library output="${bin.loc}/${build.artifactId}-${build.version}.swc" />
     </target>
 
 </project>

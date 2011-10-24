@@ -14,7 +14,7 @@ package com.dz015.expressions.tokens.filterfunction
         public function FilterFunctionTokeniser( operatorTokenFactory:IOperatorTokenFactory )
         {
             _operatorTokenFactory = operatorTokenFactory;
-            _tokeniser = /\s*(sin|tan|cos)|(\d+)|(\w+)|(<=|>=|.)/g;
+            _tokeniser = /\s*('.*?')|(sin|tan|cos)|(\d+)|(\w+)|(<=|>=|.)/g;
         }
 
         public function tokenise( s:String ):Vector.<Token>
@@ -39,17 +39,21 @@ package com.dz015.expressions.tokens.filterfunction
 
             if ( match[1] )
             {
-                token = new Token( value, Token.FUNCTION );
+                token = new Token( value.slice(1,-1), Token.LITERAL );
             }
             if ( match[2] )
             {
-                token = new Token( value, Token.NUMERIC );
+                token = new Token( value, Token.FUNCTION );
             }
-            else if ( match[3] )
+            if ( match[3] )
+            {
+                token = new Token( value, Token.LITERAL );
+            }
+            else if ( match[4] )
             {
                 token = new Token( value, Token.SYMBOL );
             }
-            else if ( match[4] )
+            else if ( match[5] )
             {
                 token = _operatorTokenFactory.getOperatorToken( value );
             }

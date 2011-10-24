@@ -25,7 +25,7 @@ package com.dz015.expressions.tokens.expression
             var result:Vector.<Token> = _tokeniser.tokenise( "2" );
             assertEquals( "Wrong number of tokens returned with simple string", 1, result.length );
             assertEquals( "Wrong token value returned with simple string", "2", result[0].value );
-            assertEquals( "Wrong token type returned with simple string", Token.NUMERIC, result[0].type );
+            assertEquals( "Wrong token type returned with simple string", Token.LITERAL, result[0].type );
         }
 
         [Test]
@@ -34,11 +34,11 @@ package com.dz015.expressions.tokens.expression
             var result:Vector.<Token> = _tokeniser.tokenise( "2+3-yVal" );
             assertEquals( "Wrong number of tokens returned with simple string", 5, result.length );
             assertEquals( "Wrong token returned with simple string", "2", result[0].value );
-            assertEquals( "Wrong token type returned with simple string", Token.NUMERIC, result[0].type );
+            assertEquals( "Wrong token type returned with simple string", Token.LITERAL, result[0].type );
             assertEquals( "Wrong token returned with simple string", "+", result[1].value );
             assertEquals( "Wrong token type returned with simple string", Token.OPERATOR, result[1].type );
             assertEquals( "Wrong token returned with simple string", "3", result[2].value );
-            assertEquals( "Wrong token type returned with simple string", Token.NUMERIC, result[2].type );
+            assertEquals( "Wrong token type returned with simple string", Token.LITERAL, result[2].type );
             assertEquals( "Wrong token returned with simple string", "-", result[3].value );
             assertEquals( "Wrong token type returned with simple string", Token.OPERATOR, result[3].type );
             assertEquals( "Wrong token returned with simple string", "yVal", result[4].value );
@@ -68,7 +68,7 @@ package com.dz015.expressions.tokens.expression
             assertEquals( "Wrong token value returned with simple string", "+", result[1].value );
             assertEquals( "Wrong token type returned with simple string", Token.OPERATOR, result[1].type );
             assertEquals( "Wrong token value returned with simple string", "3", result[2].value );
-            assertEquals( "Wrong token type returned with simple string", Token.NUMERIC, result[2].type );
+            assertEquals( "Wrong token type returned with simple string", Token.LITERAL, result[2].type );
             assertEquals( "Wrong token value returned with simple string", "*", result[3].value );
             assertEquals( "Wrong token type returned with simple string", Token.OPERATOR, result[3].type );
             assertEquals( "Wrong token value returned with simple string", "sin", result[4].value );

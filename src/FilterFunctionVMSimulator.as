@@ -13,7 +13,6 @@ package
 
         public function filterFunction( item:Object ):Boolean
         {
-            trace("FILTER");
             var n1:Number;
             var n2:Number;
             var _stack:Vector.<Number> = new Vector.<Number>();
@@ -29,7 +28,7 @@ package
                         _stack.push( item[token.value] );
                         break;
 
-                    case Token.NUMERIC:
+                    case Token.LITERAL:
                         _stack.push( token.value );
                         break;
 
@@ -118,7 +117,6 @@ package
                 }
 
             }
-            trace("Returning ",_stack[0]);
             return _stack.pop();
         }
     }
