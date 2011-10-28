@@ -14,7 +14,7 @@ package com.dz015.expressions.tokens.filterfunction
         public function FilterFunctionTokeniser( operatorTokenFactory:IOperatorTokenFactory )
         {
             _operatorTokenFactory = operatorTokenFactory;
-            _tokeniser = /\s*('.*?')|(sin|tan|cos)|(\d+)|(\w+)|(<=|>=|.)/g;
+            _tokeniser = /\s*('.*?')|(sin|tan|cos)|(\d+)|(\w+)|(!=|<=|>=|.)/g;
         }
 
         public function tokenise( s:String ):Vector.<Token>

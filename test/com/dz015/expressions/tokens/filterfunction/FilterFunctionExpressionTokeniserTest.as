@@ -146,5 +146,18 @@ public class FilterFunctionExpressionTokeniserTest
         assertEquals( "Wrong token type returned with simple string", Token.LITERAL, result[2].type );
     }
 
+    [Test]
+    public function testNotEquals():void
+    {
+        var result:Vector.<Token> = _tokeniser.tokenise( "y!='c'" );
+        assertEquals( "Wrong number of tokens returned with simple string", 3, result.length );
+        assertEquals( "Wrong token value returned with simple string", "y", result[0].value );
+        assertEquals( "Wrong token type returned with simple string", Token.SYMBOL, result[0].type );
+        assertEquals( "Wrong token value returned with simple string", "!=", result[1].value );
+        assertEquals( "Wrong token type returned with simple string", Token.OPERATOR, result[1].type );
+        assertEquals( "Wrong token value returned with simple string", "c", result[2].value );
+        assertEquals( "Wrong token type returned with simple string", Token.LITERAL, result[2].type );
+    }
+
 }
 }
