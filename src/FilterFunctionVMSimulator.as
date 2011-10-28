@@ -105,6 +105,9 @@ package
                             case '=':
                                 _stack.push( _stack.pop() == _stack.pop() );
                                 break;
+                            case '!=':
+                                _stack.push( _stack.pop() != _stack.pop() );
+                                break;
                             case '&':
                                 _stack.push( _stack.pop() && _stack.pop() );
                                 break;

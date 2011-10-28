@@ -95,10 +95,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FilterFunctionExpressionTokeniserTest.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FilterFunctionExpressionTokeniserTest.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/dz015/expressions/tokens/filterfunction/FilterFunctionExpressionTokeniserTest.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="73" selection-start="9391" selection-end="9391" vertical-scroll-proportion="0.7981982">
+            <state line="155" column="73" selection-start="9391" selection-end="9391" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilterFunctionVMSimulator.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FilterFunctionVMSimulator.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="59" selection-start="4337" selection-end="4337" vertical-scroll-proportion="0.76936936">
               <folding />
             </state>
           </provider>
@@ -155,13 +164,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/FilterFunctionVMSimulator.as" />
         <option value="$PROJECT_DIR$/build/build.properties" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionTokeniser.as" />
         <option value="$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionOperatorTokenFactory.as" />
         <option value="$PROJECT_DIR$/test/com/dz015/expressions/shuntyard/FilterFunctionInfixToPostfixConverterTest.as" />
         <option value="$PROJECT_DIR$/test/com/dz015/expressions/tokens/filterfunction/FilterFunctionExpressionTokeniserTest.as" />
+        <option value="$PROJECT_DIR$/src/FilterFunctionVMSimulator.as" />
       </list>
     </option>
   </component>
@@ -658,11 +667,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/FilterFunctionVMSimulator.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="0" selection-start="4638" selection-end="4638" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/Token.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="24" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" />
@@ -725,7 +729,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/dz015/expressions/tokens/filterfunction/FilterFunctionExpressionTokeniserTest.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="73" selection-start="9391" selection-end="9391" vertical-scroll-proportion="0.7981982">
+        <state line="155" column="73" selection-start="9391" selection-end="9391" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FilterFunctionVMSimulator.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="59" selection-start="4337" selection-end="4337" vertical-scroll-proportion="0.76936936">
           <folding />
         </state>
       </provider>
