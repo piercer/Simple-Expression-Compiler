@@ -47,7 +47,8 @@ public class FilterFunctionInfixToPostfixConverterTest
             [ "profit>0 and loss>0", "profit 0 > loss 0 > &"],
             [ "profit>0 or loss>0", "profit 0 > loss 0 > |"],
             [ "type='c' and value>3", "type c = value 3 > &" ],
-            [ "type!=c or value!=3", "type c != value 3 != |" ]
+            [ "type!=c or value!=3", "type c != value 3 != |" ],
+            [ "(type='c' and value>3) or (type!=c or value!=3)", "type c = value 3 > & type c != value 3 != | |" ]
         ];
     }
 
