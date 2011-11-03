@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7072aad6-fc06-4469-ae43-9285f5be8510" name="Default" comment="" />
+    <list default="true" id="7072aad6-fc06-4469-ae43-9285f5be8510" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Simple-Expression-Compiler.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,16 +66,96 @@
       <file leaf-file-name="FilterFunctionInfixToPostfixConverterTest.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/dz015/expressions/shuntyard/FilterFunctionInfixToPostfixConverterTest.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="53" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0">
+            <state line="40" column="51" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InfixToPostfixConverter.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FilterFunctionOperatorTokenFactory.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionOperatorTokenFactory.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="39" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilterFunctionTokeniser.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionTokeniser.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="67" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JS/com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser" pinned="false" current="false" current-in-tab="false">
+        <entry file="uml://JS/com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JS</ID>
+              <OriginalElement>com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser</OriginalElement>
+              <nodes>
+                <node x="67.25" y="80.0">com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser</node>
+                <node x="199.0" y="0.0">Object</node>
+                <node x="0.0" y="0.0">com.dz015.expressions.tokens.IExpressionTokeniser</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser" target="Object">
+                  <point x="48.25" y="-15.0" />
+                  <point x="212.0" y="55.0" />
+                  <point x="238.0" y="55.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser" target="com.dz015.expressions.tokens.IExpressionTokeniser">
+                  <point x="-48.25" y="-15.0" />
+                  <point x="115.5" y="55.0" />
+                  <point x="89.5" y="55.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="-87.5" y="150.5" />
+              <SelectedNodes />
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>PRIVATE</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilterFunctionVMSimulator.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FilterFunctionVMSimulator.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="59" selection-start="4337" selection-end="4337" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultExpressionTokeniser.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/expression/DefaultExpressionTokeniser.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Token.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/Token.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="62" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.53106683">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfixToPostfixConverter.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/shuntyard/InfixToPostfixConverter.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="126" selection-start="509" selection-end="509" vertical-scroll-proportion="-0.008018328">
+            <state line="17" column="126" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,6 +172,9 @@
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
     <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -111,7 +198,7 @@
     <option name="width" value="1680" />
     <option name="height" value="1024" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -137,8 +224,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -343,6 +428,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tokens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expression" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Simple-Expression-Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Simple-Expression-Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expressions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="shuntyard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -377,21 +488,27 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="MavenSettings" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="FlexUnit.FilterFunctionInfixToPostfixConverterTest">
     <configuration default="false" name="FilterFunctionExpressionTokeniserTest" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" temporary="true" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="com.dz015.expressions.tokens.filterfunction.FilterFunctionExpressionTokeniserTest" debugger_sdk="Module SDK" html_or_swf_file_path="$PROJECT_DIR$/out/test/Simple-Expression-Compiler/_flexunit.swf" launcher_type="OSDefault" main_class_name="" method_name="" module_name="Simple-Expression-Compiler" output_log_level="" package_name="" player_path="/Applications/Flash Player Debugger.app" port="7832" run_mode="HtmlOrSwfFile" run_trusted="true" scope="Class" socket_policy_port="7852" url_to_launch="http://">
@@ -508,6 +625,24 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7072aad6-fc06-4469-ae43-9285f5be8510" name="Default" comment="" />
@@ -521,14 +656,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59090906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -538,6 +672,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -598,21 +733,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/Token.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="24" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/dz015/expressions/tokens/expression/DefaultExpressionTokeniserTest.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/build.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="17" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" />
@@ -633,16 +753,60 @@
         <state line="155" column="73" selection-start="9391" selection-end="9391" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FilterFunctionVMSimulator.as">
+    <entry file="file://$PROJECT_DIR$/test/com/dz015/expressions/shuntyard/DefaultInfixToPostfixConverterTest.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="59" selection-start="4337" selection-end="4337" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/shuntyard/InfixToPostfixConverter.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="126" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="uml://JS/com.dz015.expressions.shuntyard.FilterFunctionInfixToPostfixConverterTest">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JS</ID>
+          <OriginalElement>com.dz015.expressions.shuntyard.FilterFunctionInfixToPostfixConverterTest</OriginalElement>
+          <nodes>
+            <node x="" y="">com.dz015.expressions.shuntyard.FilterFunctionInfixToPostfixConverterTest</node>
+            <node x="" y="">Object</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="157.0" y="55.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/dz015/expressions/shuntyard/FilterFunctionInfixToPostfixConverterTest.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="51" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionTokeniser.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="67" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" />
+    <entry file="uml://JS/com.dz015.expressions.tokens.filterfunction.FilterFunctionOperatorTokenFactory">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JS</ID>
+          <OriginalElement>com.dz015.expressions.tokens.filterfunction.FilterFunctionOperatorTokenFactory</OriginalElement>
+          <nodes>
+            <node x="" y="">com.dz015.expressions.tokens.IOperatorTokenFactory</node>
+            <node x="" y="">Object</node>
+            <node x="" y="">com.dz015.expressions.tokens.filterfunction.FilterFunctionOperatorTokenFactory</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="155.5" y="55.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionOperatorTokenFactory.as">
@@ -650,21 +814,82 @@
         <state line="35" column="39" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/dz015/expressions/shuntyard/DefaultInfixToPostfixConverterTest.as">
+    <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionTokeniser.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="16" column="67" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/dz015/expressions/shuntyard/FilterFunctionInfixToPostfixConverterTest.as">
+    <entry file="uml://JS/com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JS</ID>
+          <OriginalElement>com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser</OriginalElement>
+          <nodes>
+            <node x="67.25" y="80.0">com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser</node>
+            <node x="199.0" y="0.0">Object</node>
+            <node x="0.0" y="0.0">com.dz015.expressions.tokens.IExpressionTokeniser</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser" target="Object">
+              <point x="48.25" y="-15.0" />
+              <point x="212.0" y="55.0" />
+              <point x="238.0" y="55.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.dz015.expressions.tokens.filterfunction.FilterFunctionTokeniser" target="com.dz015.expressions.tokens.IExpressionTokeniser">
+              <point x="-48.25" y="-15.0" />
+              <point x="115.5" y="55.0" />
+              <point x="89.5" y="55.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-87.5" y="150.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FilterFunctionVMSimulator.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="53" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0">
+        <state line="108" column="59" selection-start="4337" selection-end="4337" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="uml://JS/com.dz015.expressions.tokens.expression.DefaultExpressionTokeniser">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JS</ID>
+          <OriginalElement>com.dz015.expressions.tokens.expression.DefaultExpressionTokeniser</OriginalElement>
+          <nodes>
+            <node x="" y="">Object</node>
+            <node x="" y="">com.dz015.expressions.tokens.IExpressionTokeniser</node>
+            <node x="" y="">com.dz015.expressions.tokens.expression.DefaultExpressionTokeniser</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="139.0" y="255.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/expression/DefaultExpressionTokeniser.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/shuntyard/InfixToPostfixConverter.as">
+    <entry file="file://$PROJECT_DIR$/src/com/dz015/expressions/tokens/Token.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="126" selection-start="509" selection-end="509" vertical-scroll-proportion="-0.008018328">
+        <state line="70" column="62" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.53106683">
           <folding />
         </state>
       </provider>
