@@ -19,6 +19,7 @@ package com.dz015.expressions.tokens.filterfunction
 
         public function tokenise( s:String ):Vector.<Token>
         {
+            s = s.replace( / and /g, '&' ).replace( / or /g, '|' ).replace( / /g, '' );
             var tokens:Vector.<Token> = new Vector.<Token>();
 
             var match:Array = _tokeniser.exec( s );

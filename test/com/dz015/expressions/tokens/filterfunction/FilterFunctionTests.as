@@ -1,12 +1,10 @@
 package com.dz015.expressions.tokens.filterfunction
 {
-    import com.dz015.expressions.compilers.CompilerEvent;
-    import com.dz015.expressions.compilers.FilterFunctionCompiler;
+    import com.dz015.expressions.shuntyard.InfixToPostfixConverter;
 
     import mx.collections.ArrayCollection;
 
     import org.flexunit.asserts.assertEquals;
-    import org.flexunit.async.Async;
     import org.flexunit.runners.Parameterized;
 
     Parameterized;
@@ -16,7 +14,6 @@ package com.dz015.expressions.tokens.filterfunction
     {
 
         private var _data:ArrayCollection;
-        private var _filterFunctionCompiler:FilterFunctionCompiler;
 
         public function FilterFunctionTests()
         {
@@ -38,7 +35,6 @@ package com.dz015.expressions.tokens.filterfunction
                     _data.addItem( new FilterFunctionTestObject( i, i * 2, 2, 1 ) );
                 }
             }
-            _filterFunctionCompiler = new FilterFunctionCompiler();
         }
 
         public static function testFilters():Array
@@ -53,20 +49,15 @@ package com.dz015.expressions.tokens.filterfunction
             ];
         }
 
-        [Test(async,dataProvider="testFilters")]
-        public function testFilter( filter:String,  nPassing:uint ):void
+        [Test(dataProvider="testFilters")]
+        public function testFilter( filter:String, nPassing:uint ):void
         {
-            Async.handleEvent( this, _filterFunctionCompiler, CompilerEvent.COMPILE_COMPLETE, testFilteredDataIsCorrectLength, 1000, nPassing );
-            _filterFunctionCompiler.compile( filter, new FilterFunctionTokeniser( new FilterFunctionOperatorTokenFactory() ) );
-        }
 
-        private function testFilteredDataIsCorrectLength( event:CompilerEvent, length:uint ):void
-        {
-            var filterClass:Class = event.klass;
-            var filterer:* = new filterClass();
+            var converter:InfixToPostfixConverter = new InfixToPostfixConverter( new FilterFunctionTokeniser( new FilterFunctionOperatorTokenFactory() ) );
+            var filterer:FilterFunctionVMSimulator = new FilterFunctionVMSimulator( converter.convert( filter ).stack );
             _data.filterFunction = filterer.filterFunction;
             _data.refresh();
-            assertEquals( "Data is not filtered correctly", length, _data.length );
+            assertEquals( "Data is not filtered correctly", nPassing, _data.length );
         }
 
     }
