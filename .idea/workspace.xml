@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7072aad6-fc06-4469-ae43-9285f5be8510" name="Default" comment="Added in support for boolean literals and added '=' operator which was stupidly missing">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+    <list default="true" id="7072aad6-fc06-4469-ae43-9285f5be8510" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dz015/expressions/tokens/Token.as" afterPath="$PROJECT_DIR$/src/com/dz015/expressions/tokens/Token.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionOperatorTokenFactory.as" afterPath="$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionOperatorTokenFactory.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionTokeniser.as" afterPath="$PROJECT_DIR$/src/com/dz015/expressions/tokens/filterfunction/FilterFunctionTokeniser.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/dz015/expressions/tokens/filterfunction/FilterFunctionExpressionTokeniserTest.as" afterPath="$PROJECT_DIR$/test/com/dz015/expressions/tokens/filterfunction/FilterFunctionExpressionTokeniserTest.as" />
     </list>
     <ignored path="Simple-Expression-Compiler.iws" />
     <ignored path=".idea/workspace.xml" />
