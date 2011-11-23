@@ -13,12 +13,12 @@ package com.dz015.expressions.tokens
         public static const LEFT_ASSOCIATIVE:uint = 0;
         public static const RIGHT_ASSOCIATIVE:uint = 1;
 
-        private var _value:String;
+        private var _value:*;
         private var _type:uint;
         private var _precedence:uint;
         private var _associativity:uint;
 
-        public function Token( value:String, type:uint, precedence:uint = 0, associativity:uint = 0 )
+        public function Token( value:*, type:uint, precedence:uint = 0, associativity:uint = 0 )
         {
             _value = value;
             _type = type;
@@ -26,7 +26,7 @@ package com.dz015.expressions.tokens
             _associativity = associativity;
         }
 
-        public function get value():String
+        public function get value():*
         {
             return _value;
         }
@@ -76,7 +76,7 @@ package com.dz015.expressions.tokens
             return _associativity == LEFT_ASSOCIATIVE;
         }
 
-        public function get isNumeric():Boolean
+        public function get isLiteral():Boolean
         {
             return _type == LITERAL;
         }

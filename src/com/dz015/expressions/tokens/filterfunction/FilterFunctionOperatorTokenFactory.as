@@ -38,6 +38,7 @@ package com.dz015.expressions.tokens.filterfunction
                 case '>=':
                 case '<=':
                 case '!=':
+                case '=':
                     operatorToken = new Token( symbol, Token.OPERATOR, 1, Token.RIGHT_ASSOCIATIVE );
                     break;
 
